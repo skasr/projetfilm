@@ -1,0 +1,135 @@
+:root {
+  --couleur-fond: #141414;
+  --couleur-fond-clair: #1f1f1f;
+  --couleur-texte: #ffffff;
+  --couleur-texte-gris: #b3b3b3;
+  --couleur-accent: #e50914;
+  --couleur-accent-hover: #f6121d;
+
+  --font-principale: Arial, Helvetica, sans-serif;
+
+  --espacement-sm: 8px;
+  --espacement-md: 16px;
+  --espacement-lg: 32px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-principale);
+  background-color: var(--couleur-fond);
+  color: var(--couleur-texte);
+  line-height: 1.5;
+}
+
+a {
+  color: var(--couleur-texte);
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.lien-evitement {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--couleur-accent);
+  color: white;
+  padding: var(--espacement-sm);
+  z-index: 100;
+}
+
+.lien-evitement:focus {
+  left: var(--espacement-sm);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacement-sm);
+  padding: var(--espacement-md);
+  background-color: var(--couleur-fond-clair);
+}
+
+.logo img {
+  height: 30px;
+}
+
+.nav-principale ul,
+.zone-utilisateur nav ul {
+  list-style: none;
+  display: flex;
+  gap: var(--espacement-md);
+  flex-wrap: wrap;
+}
+
+.nav-principale a,
+.zone-utilisateur nav a {
+  font-size: 14px;
+}
+
+.nav-principale a:hover,
+.zone-utilisateur nav a:hover {
+  color: var(--couleur-accent);
+}
+
+.zone-utilisateur {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacement-sm);
+}
+
+.form-recherche {
+  display: flex;
+  gap: var(--espacement-sm);
+}
+
+.form-recherche input {
+  flex: 1;
+  padding: var(--espacement-sm);
+  border: none;
+  border-radius: 4px;
+  background-color: var(--couleur-fond);
+  color: var(--couleur-texte);
+}
+
+.form-recherche button {
+  padding: var(--espacement-sm) var(--espacement-md);
+  background-color: var(--couleur-accent);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-recherche button:hover {
+  background-color: var(--couleur-accent-hover);
+}
+
+@media (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .zone-utilisateur {
+    flex-direction: row;
+    align-items: center;
+  }
+}
