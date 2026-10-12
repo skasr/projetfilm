@@ -1,0 +1,58 @@
+@use '../utils/variables' as *;
+
+.grille-films {
+  padding: $espacement-lg $espacement-md;
+
+  h2 {
+    margin-bottom: $espacement-sm;
+  }
+}
+
+.btn-toggle {
+  margin-bottom: $espacement-md;
+  background: none;
+  border: 1px solid $text-muted;
+  color: $text-light;
+  padding: 4px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    border-color: $primary-red;
+    color: $primary-red;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.inscription {
+  padding: $espacement-lg $espacement-md;
+  background-color: $secondary-gray;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: $espacement-md;
+    max-width: 400px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: $espacement-sm;
+  }
+
+  input {
+    width: 100%;
+    padding: $espacement-sm;
+    background-color: $primary-dark;
+    color: $text-light;
+    border: 1px solid $secondary-gray;
+    border-radius: 4px;
+  }
+
+  button {
+    align-self: flex-start;
+  }
+}

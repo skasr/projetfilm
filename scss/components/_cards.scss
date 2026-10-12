@@ -1,0 +1,22 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+.carte-film {
+  background-color: $secondary-gray;
+  border: none;
+  @include hover-zoom(1.05);
+
+  .card-title {
+    font-size: $font-size-small + 2px;
+  }
+
+  .card-text {
+    font-size: $font-size-small;
+    color: $text-muted;
+  }
+
+  .badge {
+    background-color: $accent-blue;
+    margin-right: 4px;
+  }
+}

@@ -1,0 +1,26 @@
+@use '../utils/variables' as *;
+
+.header {
+  background-color: $primary-dark;
+}
+
+.logo img {
+  height: 30px;
+}
+
+.zone-utilisateur {
+  gap: $espacement-md;
+  align-items: center;
+}
+
+.form-recherche {
+  gap: $espacement-sm;
+
+  input {
+    padding: $espacement-sm;
+    border-radius: 4px;
+    background-color: $primary-dark;
+    color: $text-light;
+    border: 1px solid $secondary-gray;
+  }
+}
