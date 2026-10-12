@@ -69,3 +69,27 @@ searchInput.addEventListener('input', function () {
     messageAucunResultat.classList.add('hidden');
   }
 });
+
+// exercice 5 - modal
+
+function openModal(titre) {
+  const modal = document.querySelector('#modal');
+  const modalBody = document.querySelector('#modal-body');
+
+  modalBody.innerHTML = '<h2>' + titre + '</h2>';
+  modal.style.display = 'block';
+}
+
+function closeModal() {
+  const modal = document.querySelector('#modal');
+  modal.style.display = 'none';
+}
+
+cartesFilms.forEach(function (carte) {
+  carte.addEventListener('click', function (event) {
+    const titre = event.currentTarget.querySelector('h3').textContent;
+    openModal(titre);
+  });
+});
+
+document.querySelector('.close').addEventListener('click', closeModal);

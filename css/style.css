@@ -5996,6 +5996,33 @@ a {
   color: #999999;
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  background-color: #564d4d;
+  color: #ffffff;
+  margin: 15% auto;
+  padding: 16px;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 4px;
+}
+
+.close {
+  float: right;
+  font-size: 28px;
+  cursor: pointer;
+}
+
 .inscription {
   padding: 32px 16px;
   background-color: #564d4d;
