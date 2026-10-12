@@ -1,0 +1,39 @@
+@use '../utils/variables' as *;
+
+.hero {
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  align-items: flex-end;
+
+  @media (min-width: 768px) {
+    height: 80vh;
+  }
+}
+
+.hero-overlay {
+  width: 100%;
+  padding: $espacement-lg $espacement-md;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1));
+
+  h1 {
+    margin-bottom: $espacement-sm;
+  }
+}
+
+.hero-infos {
+  color: $text-muted;
+  margin-bottom: $espacement-sm;
+}
+
+.hero-description {
+  max-width: 500px;
+  margin-bottom: $espacement-md;
+}
+
+.hero-boutons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $espacement-sm;
+}

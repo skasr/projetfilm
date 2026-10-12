@@ -1,0 +1,38 @@
+@use '../utils/variables' as *;
+
+.footer {
+  padding: $espacement-lg $espacement-md;
+  text-align: center;
+  background-color: $primary-dark;
+  color: $text-muted;
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: $espacement-sm;
+    margin-bottom: $espacement-md;
+  }
+
+  a:hover {
+    color: $text-light;
+  }
+
+  .reseaux-sociaux {
+    display: flex;
+    justify-content: center;
+    gap: $espacement-md;
+    margin-bottom: $espacement-md;
+  }
+
+  .reseaux-sociaux a:hover {
+    color: $primary-red;
+  }
+
+  @media (min-width: 768px) {
+    nav ul {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+}

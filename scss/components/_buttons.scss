@@ -1,0 +1,24 @@
+@use '../utils/variables' as *;
+
+.btn-lecture {
+  background-color: $text-light;
+  color: $primary-dark;
+  border: none;
+
+  &:hover {
+    background-color: $text-muted;
+    color: $primary-dark;
+  }
+}
+
+.btn-info,
+.btn-liste {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: $text-light;
+  border: none;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    color: $text-light;
+  }
+}

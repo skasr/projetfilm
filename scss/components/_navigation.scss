@@ -1,0 +1,13 @@
+@use '../utils/variables' as *;
+
+.navbar {
+  background-color: $primary-dark;
+
+  .nav-link {
+    color: $text-light;
+
+    &:hover {
+      color: $primary-red;
+    }
+  }
+}

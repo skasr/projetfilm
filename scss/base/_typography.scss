@@ -1,0 +1,21 @@
+@use '../utils/variables' as *;
+
+body {
+  font-family: $font-primary;
+  font-size: $font-size-base;
+  background-color: $primary-dark;
+  color: $text-light;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: $font-size-large * 1.5;
+}
+
+h2 {
+  font-size: $font-size-large;
+}
+
+a {
+  color: $text-light;
+}
