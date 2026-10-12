@@ -5952,7 +5952,25 @@ a {
   padding: 32px 16px;
 }
 .grille-films h2 {
+  margin-bottom: 8px;
+}
+
+.btn-toggle {
   margin-bottom: 16px;
+  background: none;
+  border: 1px solid #999999;
+  color: #ffffff;
+  padding: 4px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.btn-toggle:hover {
+  border-color: #e50914;
+  color: #e50914;
+}
+
+.hidden {
+  display: none;
 }
 
 .inscription {

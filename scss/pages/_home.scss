@@ -4,8 +4,27 @@
   padding: $espacement-lg $espacement-md;
 
   h2 {
-    margin-bottom: $espacement-md;
+    margin-bottom: $espacement-sm;
   }
+}
+
+.btn-toggle {
+  margin-bottom: $espacement-md;
+  background: none;
+  border: 1px solid $text-muted;
+  color: $text-light;
+  padding: 4px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    border-color: $primary-red;
+    color: $primary-red;
+  }
+}
+
+.hidden {
+  display: none;
 }
 
 .inscription {
