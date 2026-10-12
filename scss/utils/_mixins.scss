@@ -1,0 +1,14 @@
+@mixin hover-zoom($scale: 1.05) {
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale($scale);
+  }
+}
+
+@mixin flex-center($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+  justify-content: center;
+}
