@@ -19,4 +19,22 @@
     background-color: $accent-blue;
     margin-right: 4px;
   }
+
+  cursor: pointer;
+  position: relative;
+
+  &.watched {
+    opacity: 0.6;
+
+    &::after {
+      content: "\2713 Vu";
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: green;
+      color: $text-light;
+      padding: 5px 10px;
+      border-radius: 4px;
+    }
+  }
 }

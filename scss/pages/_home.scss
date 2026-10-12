@@ -27,6 +27,11 @@
   display: none;
 }
 
+.message-recherche {
+  padding: $espacement-md;
+  color: $text-muted;
+}
+
 .inscription {
   padding: $espacement-lg $espacement-md;
   background-color: $secondary-gray;

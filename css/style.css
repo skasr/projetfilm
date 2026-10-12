@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -5843,6 +5844,23 @@ a {
   background-color: #0071eb;
   margin-right: 4px;
 }
+.carte-film {
+  cursor: pointer;
+  position: relative;
+}
+.carte-film.watched {
+  opacity: 0.6;
+}
+.carte-film.watched::after {
+  content: "✓Vu";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: green;
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
 
 .navbar {
   background-color: #221f1f;
@@ -5971,6 +5989,11 @@ a {
 
 .hidden {
   display: none;
+}
+
+.message-recherche {
+  padding: 16px;
+  color: #999999;
 }
 
 .inscription {
