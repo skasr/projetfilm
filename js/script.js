@@ -93,3 +93,17 @@ cartesFilms.forEach(function (carte) {
 });
 
 document.querySelector('.close').addEventListener('click', closeModal);
+
+// exercice 6 bonus - theme sombre / clair
+
+const boutonTheme = document.querySelector('#theme-toggle');
+
+boutonTheme.addEventListener('click', function () {
+  document.body.classList.toggle('light-theme');
+
+  if (document.body.classList.contains('light-theme')) {
+    boutonTheme.textContent = 'Mode sombre';
+  } else {
+    boutonTheme.textContent = 'Mode clair';
+  }
+});

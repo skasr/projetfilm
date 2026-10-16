@@ -4,10 +4,20 @@
 .carte-film {
   background-color: $secondary-gray;
   border: none;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
   @include hover-zoom(1.05);
+  height: 100%;
+
+  .card-img-top {
+    height: 280px;
+    object-fit: cover;
+  }
 
   .card-title {
     font-size: $font-size-small + 2px;
+    margin-bottom: 4px;
   }
 
   .card-text {

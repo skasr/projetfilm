@@ -5783,12 +5783,38 @@ a {
   text-decoration: none;
 }
 
+.lien-evitement {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: #e50914;
+  color: white;
+  padding: 8px;
+  z-index: 1100;
+}
+
+.lien-evitement:focus {
+  left: 8px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
 body {
   font-family: "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   background-color: #221f1f;
   color: #ffffff;
   line-height: 1.5;
+}
+body.light-theme {
+  background-color: #f2f2f2;
+  color: #1a1a1a;
 }
 
 h1 {
@@ -5828,13 +5854,24 @@ a {
 .carte-film {
   background-color: #564d4d;
   border: none;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
   transition: transform 0.2s;
 }
 .carte-film:hover {
   transform: scale(1.05);
 }
+.carte-film {
+  height: 100%;
+}
+.carte-film .card-img-top {
+  height: 280px;
+  object-fit: cover;
+}
 .carte-film .card-title {
   font-size: 16px;
+  margin-bottom: 4px;
 }
 .carte-film .card-text {
   font-size: 14px;
@@ -5874,10 +5911,14 @@ a {
 
 .header {
   background-color: #221f1f;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
-.logo img {
-  height: 30px;
+.logo {
+  color: #e50914;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 .zone-utilisateur {
@@ -5895,27 +5936,41 @@ a {
   color: #ffffff;
   border: 1px solid #564d4d;
 }
+.form-recherche input:focus {
+  outline: none;
+  border-color: #e50914;
+}
 
 .hero {
   background-size: cover;
-  background-position: center;
-  height: 60vh;
+  background-position: top center;
+  height: 50vh;
   display: flex;
   align-items: flex-end;
+  position: relative;
 }
 @media (min-width: 768px) {
   .hero {
-    height: 80vh;
+    height: 70vh;
   }
 }
 
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.85) 20%, rgba(0, 0, 0, 0.3) 100%);
+}
+
 .hero-overlay {
+  position: relative;
   width: 100%;
   padding: 32px 16px;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1));
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0) 60%);
 }
 .hero-overlay h1 {
   margin-bottom: 8px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
 }
 
 .hero-infos {
