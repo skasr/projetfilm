@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>StreamFlix - Films et Series en streaming</title>
   <meta name="description" content="StreamFlix, la plateforme de streaming pour regarder vos films et series preferes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -69,7 +72,7 @@
     <section class="grille-films">
       <h2>Tendances actuelles</h2>
       <button type="button" class="btn-toggle">Masquer</button>
-      <div class="row">
+      <div class="row g-4">
         <div class="col-6 col-md-4">
           <article class="card carte-film">
             <img src="images/films/dark-knight.webp" class="card-img-top" alt="Affiche du film The Dark Knight">
@@ -112,7 +115,7 @@
     <section class="grille-films">
       <h2>Recommandes pour vous</h2>
       <button type="button" class="btn-toggle">Masquer</button>
-      <div class="row">
+      <div class="row g-4">
         <div class="col-6 col-md-4">
           <article class="card carte-film">
             <img src="images/films/inception.webp" class="card-img-top" alt="Affiche du film Inception">
@@ -154,7 +157,7 @@
     <section class="grille-films">
       <h2>Nouveautes</h2>
       <button type="button" class="btn-toggle">Masquer</button>
-      <div class="row">
+      <div class="row g-4">
         <div class="col-6 col-md-4">
           <article class="card carte-film">
             <img src="images/films/interstellar.jpg" class="card-img-top" alt="Affiche du film Interstellar">
@@ -195,25 +198,30 @@
     </section>
 
     <section class="inscription">
-      <h2>Inscrivez-vous</h2>
-      <form action="#" method="post">
-        <div class="mb-3">
-          <label for="nom">Nom</label>
-          <input type="text" id="nom" name="nom" required>
-        </div>
+      <div class="inscription-boite">
+        <h2>Inscrivez-vous</h2>
+        <p class="inscription-soustitre">Creez votre compte pour acceder a tout le catalogue StreamFlix.</p>
 
-        <div class="mb-3">
-          <label for="email">Adresse email</label>
-          <input type="email" id="email" name="email" required>
-        </div>
+        <form action="#" method="post">
+          <div class="mb-3">
+            <label for="nom" class="form-label">Nom</label>
+            <input type="text" id="nom" name="nom" class="form-control" required>
+          </div>
 
-        <div class="mb-3">
-          <label for="mdp">Mot de passe</label>
-          <input type="password" id="mdp" name="mdp" minlength="8" required>
-        </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Adresse email</label>
+            <input type="email" id="email" name="email" class="form-control" required>
+          </div>
 
-        <button type="submit" class="btn btn-danger">S'inscrire</button>
-      </form>
+          <div class="mb-3">
+            <label for="mdp" class="form-label">Mot de passe</label>
+            <input type="password" id="mdp" name="mdp" class="form-control" minlength="8" required>
+            <div class="form-text">8 caracteres minimum</div>
+          </div>
+
+          <button type="submit" class="btn btn-danger w-100">S'inscrire</button>
+        </form>
+      </div>
     </section>
 
   </main>

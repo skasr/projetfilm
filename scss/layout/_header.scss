@@ -3,29 +3,75 @@
 .header {
   background-color: $primary-dark;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+
+  .navbar {
+    padding: $espacement-sm $espacement-md;
+  }
 }
 
 .logo {
   color: $primary-red;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: bold;
   letter-spacing: 1px;
+  margin-right: $espacement-lg;
+}
+
+.navbar-nav .nav-link {
+  padding-left: $espacement-sm;
+  padding-right: $espacement-sm;
+  position: relative;
+  transition: color 0.2s;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: $espacement-sm;
+    right: $espacement-sm;
+    bottom: 2px;
+    height: 2px;
+    background-color: $primary-red;
+    transform: scaleX(0);
+    transition: transform 0.2s;
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
+  }
+}
+
+.zone-utilisateur nav .nav-link {
+  font-size: $font-size-small;
+  color: $text-muted;
+
+  &:hover {
+    color: $text-light;
+  }
 }
 
 .zone-utilisateur {
   gap: $espacement-md;
   align-items: center;
+  margin-top: $espacement-sm;
+
+  @media (min-width: 992px) {
+    margin-top: 0;
+    padding-left: $espacement-md;
+    border-left: 1px solid rgba(255, 255, 255, 0.15);
+  }
 }
 
 .form-recherche {
   gap: $espacement-sm;
 
   input {
+    min-width: 200px;
     padding: $espacement-sm;
     border-radius: 4px;
     background-color: $primary-dark;
     color: $text-light;
     border: 1px solid $secondary-gray;
+    transition: border-color 0.2s;
 
     &:focus {
       outline: none;

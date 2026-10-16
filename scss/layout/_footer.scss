@@ -1,10 +1,12 @@
 @use '../utils/variables' as *;
+@use '../utils/mixins' as *;
 
 .footer {
-  padding: $espacement-lg $espacement-md;
+  padding: $espacement-lg * 1.2 $espacement-md;
   text-align: center;
-  background-color: $primary-dark;
+  background-color: #0b0b0b;
   color: $text-muted;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 
   nav ul {
     list-style: none;
@@ -12,6 +14,20 @@
     flex-direction: column;
     gap: $espacement-sm;
     margin-bottom: $espacement-md;
+  }
+
+  .reseaux-sociaux a {
+    display: inline-block;
+    padding: 4px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    font-size: $font-size-small;
+    transition: border-color 0.2s, color 0.2s, transform 0.2s;
+    @include hover-zoom(1.1);
+
+    &:hover {
+      border-color: $primary-red;
+    }
   }
 
   a:hover {

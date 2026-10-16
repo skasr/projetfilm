@@ -1,5 +1,3 @@
-// exercice 1 - afficher / masquer les sections
-
 const boutonsToggle = document.querySelectorAll('.btn-toggle');
 
 boutonsToggle.forEach(function (bouton) {
@@ -17,8 +15,6 @@ boutonsToggle.forEach(function (bouton) {
   });
 });
 
-// exercice 2 - compteur de films
-
 const nbFilms = document.querySelectorAll('article').length;
 const footer = document.querySelector('.footer');
 
@@ -27,17 +23,7 @@ compteur.textContent = 'Catalogue : ' + nbFilms + ' films disponibles';
 
 footer.appendChild(compteur);
 
-// exercice 3 - marquer un film comme vu
-
 const cartesFilms = document.querySelectorAll('.carte-film');
-
-cartesFilms.forEach(function (carte) {
-  carte.addEventListener('click', function (event) {
-    event.currentTarget.classList.toggle('watched');
-  });
-});
-
-// exercice 4 - recherche simple
 
 const searchInput = document.querySelector('#recherche');
 
@@ -70,13 +56,26 @@ searchInput.addEventListener('input', function () {
   }
 });
 
-// exercice 5 - modal
-
-function openModal(titre) {
+function openModal(carte) {
   const modal = document.querySelector('#modal');
   const modalBody = document.querySelector('#modal-body');
 
-  modalBody.innerHTML = '<h2>' + titre + '</h2>';
+  const titre = carte.querySelector('h3').textContent;
+  const infos = carte.querySelector('.card-text').textContent;
+  const image = carte.querySelector('img').getAttribute('src');
+
+  const badges = carte.querySelectorAll('.badge');
+  let genres = '';
+  badges.forEach(function (badge) {
+    genres += '<span class="badge">' + badge.textContent + '</span> ';
+  });
+
+  modalBody.innerHTML =
+    '<img src="' + image + '" alt="" class="modal-image">' +
+    '<h2>' + titre + '</h2>' +
+    '<p>' + infos + '</p>' +
+    '<div>' + genres + '</div>';
+
   modal.style.display = 'block';
 }
 
@@ -87,14 +86,12 @@ function closeModal() {
 
 cartesFilms.forEach(function (carte) {
   carte.addEventListener('click', function (event) {
-    const titre = event.currentTarget.querySelector('h3').textContent;
-    openModal(titre);
+    event.currentTarget.classList.toggle('watched');
+    openModal(event.currentTarget);
   });
 });
 
 document.querySelector('.close').addEventListener('click', closeModal);
-
-// exercice 6 bonus - theme sombre / clair
 
 const boutonTheme = document.querySelector('#theme-toggle');
 

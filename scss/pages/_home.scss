@@ -1,10 +1,13 @@
 @use '../utils/variables' as *;
+@use '../utils/mixins' as *;
 
 .grille-films {
   padding: $espacement-lg $espacement-md;
 
   h2 {
-    margin-bottom: $espacement-sm;
+    margin-bottom: $espacement-md;
+    padding-left: $espacement-sm + 2px;
+    border-left: 4px solid $primary-red;
   }
 }
 
@@ -46,45 +49,85 @@
 .modal-content {
   background-color: $secondary-gray;
   color: $text-light;
-  margin: 15% auto;
-  padding: $espacement-md;
-  width: 80%;
-  max-width: 500px;
-  border-radius: 4px;
+  margin: 8% auto;
+  padding: $espacement-lg;
+  width: 90%;
+  max-width: 420px;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+.modal-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: $espacement-md;
+}
+
+#modal-body h2 {
+  margin-bottom: $espacement-sm;
+}
+
+#modal-body p {
+  color: $text-muted;
+  margin-bottom: $espacement-md;
+}
+
+#modal-body .badge {
+  background-color: $accent-blue;
+  margin-right: 4px;
 }
 
 .close {
   float: right;
   font-size: 28px;
+  line-height: 1;
   cursor: pointer;
 }
 
 .inscription {
-  padding: $espacement-lg $espacement-md;
+  padding: $espacement-lg * 1.5 $espacement-md;
+  background-color: $primary-dark;
+  @include flex-center(row);
+}
+
+.inscription-boite {
+  width: 100%;
+  max-width: 420px;
   background-color: $secondary-gray;
+  padding: $espacement-lg;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
 
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: $espacement-md;
-    max-width: 400px;
-  }
-
-  label {
-    display: block;
+  h2 {
     margin-bottom: $espacement-sm;
   }
 
-  input {
-    width: 100%;
-    padding: $espacement-sm;
-    background-color: $primary-dark;
-    color: $text-light;
-    border: 1px solid $secondary-gray;
-    border-radius: 4px;
+  .inscription-soustitre {
+    color: $text-muted;
+    font-size: $font-size-small;
+    margin-bottom: $espacement-lg;
   }
 
-  button {
-    align-self: flex-start;
+  .form-label {
+    color: $text-light;
+  }
+
+  .form-control {
+    background-color: $primary-dark;
+    color: $text-light;
+    border: 1px solid #6b6161;
+
+    &:focus {
+      background-color: $primary-dark;
+      color: $text-light;
+      border-color: $primary-red;
+      box-shadow: none;
+    }
+  }
+
+  .form-text {
+    color: $text-muted;
   }
 }
