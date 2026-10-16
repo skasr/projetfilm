@@ -2,10 +2,14 @@
 
 .header {
   background-color: $primary-dark;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
-.logo img {
-  height: 30px;
+.logo {
+  color: $primary-red;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 .zone-utilisateur {
@@ -22,5 +26,10 @@
     background-color: $primary-dark;
     color: $text-light;
     border: 1px solid $secondary-gray;
+
+    &:focus {
+      outline: none;
+      border-color: $primary-red;
+    }
   }
 }

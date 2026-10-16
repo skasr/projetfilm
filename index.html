@@ -14,9 +14,7 @@
   <header class="header">
     <nav class="navbar navbar-expand-lg" aria-label="Navigation principale">
       <div class="container-fluid">
-        <a href="index.html" class="navbar-brand logo">
-          <img src="images/logo.png" alt="StreamFlix - retour a l'accueil">
-        </a>
+        <a href="index.html" class="navbar-brand logo">StreamFlix</a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Afficher le menu">
           <span class="navbar-toggler-icon"></span>
@@ -43,6 +41,8 @@
                 <li class="nav-item"><a class="nav-link" href="#">Deconnexion</a></li>
               </ul>
             </nav>
+
+            <button type="button" id="theme-toggle" class="btn btn-outline-light btn-sm">Mode clair</button>
           </div>
         </div>
       </div>
@@ -51,9 +51,9 @@
 
   <main id="main-content">
 
-    <section class="hero" style="background-image: url('images/hero-bg.jpg');">
+    <section class="hero" style="background-image: url('images/films/inception.webp');">
       <div class="hero-overlay">
-        <img src="images/hero-bg.jpg" alt="Scene du film Inception" class="hero-img-alt" style="display:none;">
+        <img src="images/films/inception.webp" alt="Scene du film Inception" class="hero-img-alt" style="display:none;">
         <h1>Inception</h1>
         <p class="hero-infos">2010 - 2h28 - Note : 4.5/5 - Sci-Fi, Thriller</p>
         <p class="hero-description">Un voleur qui s'infiltre dans les reves des autres pour voler leurs secrets decouvre qu'il doit realiser l'impossible : planter une idee plutot que de la voler.</p>
@@ -217,6 +217,13 @@
     </section>
 
   </main>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="modal-body"></div>
+    </div>
+  </div>
 
   <footer class="footer">
     <nav aria-label="Liens utiles">

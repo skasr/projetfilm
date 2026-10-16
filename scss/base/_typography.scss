@@ -6,6 +6,11 @@ body {
   background-color: $primary-dark;
   color: $text-light;
   line-height: 1.5;
+
+  &.light-theme {
+    background-color: #f2f2f2;
+    color: #1a1a1a;
+  }
 }
 
 h1 {
